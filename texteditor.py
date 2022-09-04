@@ -16,7 +16,7 @@ def new_file():
     text_area.delete(1.0, END)
 
 def open_file():
-    file = askopenfilename(defaultextension='.txt', file=[('All Files', '*.*'), ('Text Documents', '*.txt')])
+    file = askopenfilename(defaultextension='.txt', filetypes=[('All Files', '*.*'), ('Text Documents', '*.txt')])
     try:
         window.title(os.path.basename(file))
         text_area.delete(1.0, END)
